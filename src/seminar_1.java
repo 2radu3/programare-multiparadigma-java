@@ -2,7 +2,7 @@ import java.util.Arrays;
 import java.util.DoubleSummaryStatistics;
 import java.util.Scanner;
 
-public class practice_1 {
+public class seminar_1 {
     public static void main(String[] args) throws Exception {
      //   System.out.println("Seminar 1");
      //   for (String element:args){
