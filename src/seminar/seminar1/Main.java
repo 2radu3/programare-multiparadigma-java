@@ -1,4 +1,4 @@
-package seminar.seminar1.g1061;
+package seminar.seminar1;
 
 import java.util.Arrays;
 import java.util.DoubleSummaryStatistics;

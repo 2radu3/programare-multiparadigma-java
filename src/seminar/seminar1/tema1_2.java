@@ -1,3 +1,5 @@
+package seminar.seminar1;
+
 import java.util.Scanner;
 import java.util.DoubleSummaryStatistics;
 import java.util.Arrays;
