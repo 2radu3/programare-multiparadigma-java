@@ -1,8 +1,9 @@
 package seminar.seminar2.g1061;
 
 import java.util.Date;
+import java.util.Objects;
 
-public abstract class ElementPatrimonial {
+public abstract class ElementPatrimonial implements Amortizare ,Comparable<ElementPatrimonial>{
     protected String denumire;
     protected long nrInventar; //cheie
     protected double valoare;
@@ -67,5 +68,24 @@ public abstract class ElementPatrimonial {
     @Override
     public String toString() {
         return "{ "+denumire+", "+nrInventar+", "+valoare+", " +(dataAchizitie==null?"":Main.fmt.format(dataAchizitie)) +"\n"+locatie+" }";
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        //if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        ElementPatrimonial that = (ElementPatrimonial) o;
+        return nrInventar == that.nrInventar;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hashCode(nrInventar);
+    }
+
+    @Override
+    public int compareTo(ElementPatrimonial elementPatrimonial) {
+
+        return dataAchizitie.compareTo(elementPatrimonial.dataAchizitie);
     }
 }

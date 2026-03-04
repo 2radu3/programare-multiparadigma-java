@@ -13,6 +13,17 @@ public class Main {
                     fmt.parse("10.10.2020"), new Locatie("Sediu Central", a1), Categorie.CONSTRUCTII, 100);
 
             System.out.println(m1);
+            System.out.println("Amortizare: " + m1.amortizare());
+
+            MijlocFix m2 = new MijlocFix(111L);
+            System.out.println(m1.equals(m2));
+
+            MijlocFix clona = (MijlocFix) m1.clone();
+            m1.getLocatie().getAdresa().setJudet("Maramures"); //modifica judetul si in clona si in m1
+            System.out.println("Clona: ");
+            System.out.println(clona);
+            System.out.println("Mijloc fix: ");
+            System.out.println(m1);
 
         }
         catch (Exception ex) {

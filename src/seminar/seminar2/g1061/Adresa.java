@@ -1,6 +1,6 @@
 package seminar.seminar2.g1061;
 
-public class Adresa {
+public class Adresa implements Cloneable{
 
     private String judet, localitate, strada, numar;
 
@@ -49,5 +49,10 @@ public class Adresa {
     @Override
     public String toString() {
         return "{ "+judet+", "+localitate+", "+strada+", "+numar+" }";
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }

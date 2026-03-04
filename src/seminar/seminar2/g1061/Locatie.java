@@ -1,6 +1,6 @@
 package seminar.seminar2.g1061;
 
-public class Locatie {
+public class Locatie implements Cloneable{
 
     private String denumire;
 
@@ -39,4 +39,12 @@ public class Locatie {
         return "{ "+denumire+", "+adresa+" }";
     }
 
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        Locatie clona = (Locatie) super.clone();
+        if(adresa!=null){
+            clona.setAdresa((Adresa)adresa.clone());
+        }
+        return clona;
+    }
 }

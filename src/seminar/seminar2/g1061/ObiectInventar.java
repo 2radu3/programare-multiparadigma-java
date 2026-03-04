@@ -1,6 +1,7 @@
 package seminar.seminar2.g1061;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 public class ObiectInventar extends ElementPatrimonial {
     private String gestionar;
@@ -25,5 +26,20 @@ public class ObiectInventar extends ElementPatrimonial {
         this.gestionar = gestionar;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + ", " + gestionar;
+    }
 
+    @Override
+    public double calculUzura() {
+        Date dataCurenta = new Date();
+        long numarZileFunctionare = TimeUnit.MILLISECONDS.toDays(dataCurenta.getTime()-dataAchizitie.getTime());
+        return numarZileFunctionare>365?1.0:0.0;
+    }
+
+    @Override
+    public double amortizare() {
+        return calculUzura() * valoare;
+    }
 }

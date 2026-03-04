@@ -1,8 +1,9 @@
 package seminar.seminar2.g1061;
 
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
-public class MijlocFix extends ElementPatrimonial {
+public class MijlocFix extends ElementPatrimonial implements Cloneable {
 
     private Categorie categorie;
     private int durataNormata;
@@ -46,5 +47,30 @@ public class MijlocFix extends ElementPatrimonial {
     public String toString() {
         return super.toString() + "\n{ " + categorie + ", "+ durataNormata + " } ";
 
+    }
+
+    @Override
+    public double calculUzura() {
+        Date dataCurenta = new Date();
+        long numarZileFunctionare = TimeUnit.MILLISECONDS.toDays(dataCurenta.getTime()-dataAchizitie.getTime());
+        return ((double) numarZileFunctionare)/(durataNormata*365);
+    }
+
+    @Override
+    public double amortizare() {
+        return calculUzura()*getValoare();
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        MijlocFix clona = (MijlocFix) super.clone();
+        if(dataAchizitie!=null){
+            clona.setDataAchizitie((Date)dataAchizitie.clone());
+
+        }
+        if(locatie!=null){
+            clona.setLocatie((Locatie)locatie.clone());
+        }
+        return clona;
     }
 }
