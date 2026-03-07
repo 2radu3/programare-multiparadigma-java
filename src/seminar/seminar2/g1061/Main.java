@@ -58,9 +58,10 @@ public class Main {
                 Locatie locatie = new Locatie();
                 locatie.setDenumire(t[0].trim());
                 Adresa adresa = new Adresa(t[1].trim(),t[2].trim(),t[3].trim(),t[4].trim());
+                locatie.setAdresa(adresa);
                 mijlocFix.setLocatie(locatie);
-                mijloaceFixe = Arrays.copyOf(mijloaceFixe,mijloaceFixe.length + 1);
-                mijloaceFixe[mijloaceFixe.length - 1] = mijlocFix;
+                mijloaceFixe = Arrays.copyOf(mijloaceFixe,mijloaceFixe.length+1);
+                mijloaceFixe[mijloaceFixe.length-1] = mijlocFix;
             }
         }
         catch(Exception ex) {
