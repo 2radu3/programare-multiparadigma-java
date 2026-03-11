@@ -1,6 +1,8 @@
 package seminar.seminar2.g1061;
 
-public class Adresa implements Cloneable{
+import java.io.Serializable;
+
+public class Adresa implements Cloneable, Serializable {
 
     private String judet, localitate, strada, numar;
 

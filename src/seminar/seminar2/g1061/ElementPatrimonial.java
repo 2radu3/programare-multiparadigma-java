@@ -1,9 +1,10 @@
 package seminar.seminar2.g1061;
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 
-public abstract class ElementPatrimonial implements Amortizare ,Comparable<ElementPatrimonial>{
+public abstract class ElementPatrimonial implements Amortizare ,Comparable<ElementPatrimonial>, Serializable {
     protected String denumire;
     protected long nrInventar; //cheie
     protected double valoare;

@@ -1,6 +1,8 @@
 package seminar.seminar2.g1061;
 
-public class Locatie implements Cloneable{
+import java.io.Serializable;
+
+public class Locatie implements Cloneable, Serializable {
 
     private String denumire;
 
