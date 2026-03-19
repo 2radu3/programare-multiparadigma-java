@@ -39,12 +39,12 @@ public class Main {
 */
 
             citireDate("MijloaceFixe.csv");
-            for (MijlocFix m : mijloaceFixe) {
+/*            for (MijlocFix m : mijloaceFixe) {
                 System.out.println(m);
             }
 
-            creareLista();
-            System.out.println("Lista mijloacelor fixe:");
+            */creareLista();
+         /*   System.out.println("Lista mijloacelor fixe:");
             for (MijlocFix mijlocFix : lista) {
                 System.out.println(mijlocFix);
             }
@@ -60,7 +60,7 @@ public class Main {
             // de regula e vb de clasa care implmenteaza o clasa - cu new [] si acolo implementez interfata
             // sau pot cu new object [] si pot sa mi definesc o clasa
 
-            // clasa anonime - clase care new numeInterfata() {implement interfasta } sau pot cu NewObject()
+            // clasa anonime - clase care new numeInterfata() {implement interfata } sau pot cu NewObject()
             // Sortare dupa nr Inventar
             // aici face sortare pe o lista dupa un criteriu altul cel implementat decat a clasei, Comparator
             Collections.sort(lista, new Comparator<MijlocFix>() {
@@ -83,14 +83,14 @@ public class Main {
                 }
             };
 
-//            Sortare dupa valoare
+            //Sortare dupa valoare
             Collections.sort(lista, comparatorValoare);
             System.out.println("\nLista sortata dupa valoare:");
             for (MijlocFix mijlocFix : lista) {
                 System.out.println(mijlocFix);
             }
 
-//            Selectie dupa numar inventar
+            //Selectie dupa numar inventar
             long nrInventar = 3L;
             int k = lista.indexOf(new MijlocFix(nrInventar));
             if (k == -1) {
@@ -114,10 +114,11 @@ public class Main {
 //            Printare uzura
             printare("UzuraMf.csv");
 
-//            Salvare lista - Serializare
-//            salvare("mf.dat");
-//            System.out.println("Date salvate ...");
-//            Restaurare
+              //Salvare lista - Serializare
+          */    salvare("mf.dat");
+                System.out.println("Date salvate ...");
+              //Restaurare
+
             restaurare("mf.dat");
             System.out.println("\nLista restaurata:");
             for (MijlocFix m : lista) {
@@ -171,7 +172,7 @@ public class Main {
         }
     }
 
-    private static void salvare(String numeFisier) {
+    public static void salvare(String numeFisier) {
         try (ObjectOutputStream fout = new ObjectOutputStream(new FileOutputStream(numeFisier))) {
             for (MijlocFix mijlocFix : lista) {
                 fout.writeObject(mijlocFix);
@@ -181,7 +182,7 @@ public class Main {
         }
     }
 
-    private static void restaurare(String numeFisier) {
+    public static void restaurare(String numeFisier) {
         try (FileInputStream in = new FileInputStream(numeFisier);
              ObjectInputStream fin = new ObjectInputStream(in)) {
             lista.clear();

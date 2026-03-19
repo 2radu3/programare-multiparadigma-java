@@ -6,7 +6,12 @@ import java.util.concurrent.TimeUnit;
 public class MijlocFix extends ElementPatrimonial implements Cloneable {
 
     private Categorie categorie;
+
     private int durataNormata;
+
+    private double altCamp;
+
+    private static final long serialVersionUID = 1L;
 
     public MijlocFix() {
     }
