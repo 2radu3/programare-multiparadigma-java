@@ -1,4 +1,4 @@
-package seminar.seminar_05;
+package seminar.seminar_05.src;
 
 import seminar.seminar2.g1061.MijlocFix;
 import seminar.seminar2.g1061.Locatie;
