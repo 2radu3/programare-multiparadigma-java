@@ -1,4 +1,4 @@
-package seminar.seminar7.g1061;
+package seminar.seminar_07.src.seminar.seminar7.g1061;
 
 public class Inmultire<T> extends Matrice<T> implements Runnable {
     private int l1, l2;

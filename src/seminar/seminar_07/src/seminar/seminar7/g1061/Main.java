@@ -1,4 +1,4 @@
-package seminar.seminar7.g1061;
+package seminar.seminar_07.src.seminar.seminar7.g1061;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,9 +17,9 @@ public class Main {
             }
             Double[] y = new Double[m], z = new Double[n];
             Arrays.fill(y, 1.0);
-//            print(x);
+            //print(x);
 
-//            Inmumtire pe un singur fir
+            //Inmumtire pe un singur fir
             Date start = new Date();
             Operatiuni<Double> o = new Operatiuni<Double>() {
                 @Override
@@ -43,7 +43,7 @@ public class Main {
             firInmultire.join();
             Date stop = new Date();
             System.out.println("Timp de executie pe un fir:" + (stop.getTime() - start.getTime()));
-//            System.out.println(Arrays.toString(z));
+            //System.out.println(Arrays.toString(z));
             start = new Date();
             List<Thread> fire = new ArrayList<>();
             int nrMaxFire = 10, l1 = 0, l2;
@@ -64,7 +64,7 @@ public class Main {
                 fir.join();
             }
             stop = new Date();
-//            System.out.println(Arrays.toString(z));
+            //System.out.println(Arrays.toString(z));
             System.out.println("Timp de executie pe "+fire.size()+" fire:" + (stop.getTime() - start.getTime()));
 
         } catch (Exception ex) {

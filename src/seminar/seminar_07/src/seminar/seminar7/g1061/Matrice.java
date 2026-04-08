@@ -1,4 +1,4 @@
-package seminar.seminar7.g1061;
+package seminar.seminar_07.src.seminar.seminar7.g1061;
 
 public class Matrice<T> {
     protected T[][] x;
