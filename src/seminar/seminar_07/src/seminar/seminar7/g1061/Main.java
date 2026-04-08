@@ -44,6 +44,7 @@ public class Main {
             Date stop = new Date();
             System.out.println("Timp de executie pe un fir:" + (stop.getTime() - start.getTime()));
             //System.out.println(Arrays.toString(z));
+
             start = new Date();
             List<Thread> fire = new ArrayList<>();
             int nrMaxFire = 10, l1 = 0, l2;
@@ -77,5 +78,4 @@ public class Main {
             System.out.println(Arrays.toString(linie));
         }
     }
-
 }
