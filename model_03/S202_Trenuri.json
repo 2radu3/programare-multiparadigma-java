@@ -1,0 +1,12 @@
+[
+  {
+    "CodTren": 59615,
+    "TipLocomotiva": "diesel",
+    "Vagoane": [632, 655]
+  },
+  {
+    "CodTren": 92397,
+    "TipLocomotiva": "aburi",
+    "Vagoane": [671, 757, 831, 197, 631, 593]
+  }
+]
