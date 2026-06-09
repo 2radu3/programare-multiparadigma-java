@@ -1,0 +1,4 @@
+Tip Repartizare, Total Facturi, Numar Facturi
+persoane,940.0,2
+suprafata,300.0,1
+apartament,100.0,1
