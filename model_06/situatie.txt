@@ -1,0 +1,5 @@
+Cod sectie           Denumire sectie                Numar locuri         Varsta medie
+    2                  DERMATOLOGIE                       7                 50.50 
+    3                  OFTALMOLOGIE                       4                 47.50 
+    1                           ORL                      10                 45.00 
+    4                   CARDIOLOGIE                       5                    nu 
