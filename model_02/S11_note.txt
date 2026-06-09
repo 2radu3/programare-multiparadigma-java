@@ -1,0 +1,6 @@
+1,PAW,9
+2,JAVA,9
+2,SD,8.5
+3,SGBD,7
+3,Macro,9
+2,Macro,10
