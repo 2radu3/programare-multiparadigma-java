@@ -1,0 +1,14 @@
+======== CERINTA 3 ========
+
+Popescu Marian
+apartament: 100000.0,50000.0
+casa: 150000.0,200000.0
+teren: 60000.0
+Ionescu Dan
+apartament: 80000.0,75000.0
+casa: 130000.0
+teren: 
+Georgescu Laura
+apartament: 
+casa: 180000.0,250000.0
+teren: 150000.0
